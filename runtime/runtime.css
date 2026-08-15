@@ -1,0 +1,6 @@
+/* runtime.css — HD 100546b Runtime Styling */
+
+canvas {
+  background: black;
+  border: 2px solid #4dd2ff;
+}
