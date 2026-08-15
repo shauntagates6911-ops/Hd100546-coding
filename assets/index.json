@@ -1,0 +1,5 @@
+{
+  "default": "default.png",
+  "player": "player.png",
+  "enemy": "enemy.png"
+}
