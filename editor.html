@@ -1,0 +1,1835 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Motion Blocks</title>
+  <style>
+    body {
+      background: #0d0d0d;
+      color: white;
+      font-family: Arial, sans-serif;
+      padding: 30px;
+    }
+    h1 {
+      color: #4C97FF;
+      font-size: 2.5rem;
+    }
+    .block {
+      background: #4C97FF;
+      padding: 12px 18px;
+      border-radius: 12px;
+      margin: 10px 0;
+      width: fit-content;
+      font-weight: bold;
+      box-shadow: 0 4px 0 #3b7dd1;
+    }
+    .input {
+      background: white;
+      color: black;
+      padding: 2px 6px;
+      border-radius: 6px;
+      margin: 0 4px;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Motion Blocks</h1>
+
+  <div class="block">
+    move <span class="input">10</span> steps
+  </div>
+
+  <div class="block">
+    turn right <span class="input">15</span>°
+  </div>
+
+  <div class="block">
+    turn left <span class="input">15</span>°
+  </div>
+
+  <div class="block">
+    go to x: <span class="input">0</span> y: <span class="input">0</span>
+  </div>
+
+  <div class="block">
+    glide <span class="input">1</span> secs to x: <span class="input">0</span> y: <span class="input">0</span>
+  </div>
+
+  <div class="block">
+    point in direction <span class="input">90</span>
+  </div>
+
+  <div class="block">
+    change x by <span class="input">10</span>
+  </div>
+
+  <div class="block">
+    change y by <span class="input">10</span>
+  </div>
+  <div class="block">
+  bounce off edge
+</div>
+
+<div class="block">
+  set rotation style <span class="input">left-right</span>
+</div>
+
+<div class="block">
+  if on edge, bounce
+</div>
+
+<div class="block">
+  go to <span class="input">mouse-pointer</span>
+</div>
+
+<div class="block">
+  go to <span class="input">random position</span>
+</div>
+
+<div class="block">
+  glide <span class="input">2</span> secs to <span class="input">mouse-pointer</span>
+</div>
+
+<div class="block">
+  point towards <span class="input">mouse-pointer</span>
+</div>
+
+<div class="block">
+  set x to <span class="input">100</span>
+</div>
+
+<div class="block">
+  set y to <span class="input">-50</span>
+</div>
+
+<div class="block">
+  change x by <span class="input">-20</span>
+</div>
+
+<div class="block">
+  change y by <span class="input">35</span>
+</div>
+
+<div class="block">
+  move <span class="input">50</span> steps at angle <span class="input">45</span>°
+</div>
+
+<div class="block">
+  slide diagonally by x:<span class="input">20</span> y:<span class="input">20</span>
+</div>
+
+<div class="block">
+  teleport to x:<span class="input">200</span> y:<span class="input">150</span>
+</div>
+
+<div class="block">
+  drift randomly for <span class="input">3</span> secs
+</div>
+
+<div class="block">
+  orbit around sprite <span class="input">Sprite1</span> at speed <span class="input">5</span>
+</div>
+
+<div class="block">
+  set orbital angle to <span class="input">180</span>°
+</div>
+
+<div class="block">
+  accelerate by <span class="input">3</span> steps
+</div>
+
+<div class="block">
+  decelerate by <span class="input">2</span> steps
+</div>
+
+
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>HD 100546b Coding – Looks Blocks</title>
+  <style>
+    body {
+      background: radial-gradient(circle at top, #33004d, #000);
+      color: #fff;
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 40px;
+    }
+    h1 {
+      font-size: 3rem;
+      margin-bottom: 5px;
+      color: #b84dff;
+    }
+    h2 {
+      margin-top: 30px;
+      font-size: 1.8rem;
+    }
+    p {
+      font-size: 1.1rem;
+      opacity: 0.9;
+    }
+    .block-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 20px;
+      margin-top: 20px;
+    }
+    .block {
+      background: #b84dff;
+      border-radius: 10px;
+      padding: 12px 16px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.4);
+      font-weight: bold;
+    }
+    .input {
+      background: white;
+      color: black;
+      padding: 2px 6px;
+      border-radius: 6px;
+      margin: 0 4px;
+    }
+    a.back {
+      display: inline-block;
+      margin-top: 30px;
+      color: #a64dff;
+      text-decoration: none;
+      font-size: 1rem;
+    }
+    a.back:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Looks Blocks</h1>
+  <p>Custom looks blocks for the HD 100546b Coding Scratch mod.</p>
+
+  <h2>Block list</h2>
+  <div class="block-grid">
+
+    <div class="block">
+      say <span class="input">Hello!</span> for <span class="input">2</span> secs
+    </div>
+
+    <div class="block">
+      say <span class="input">Hello!</span>
+    </div>
+
+    <div class="block">
+      think <span class="input">Hmm...</span> for <span class="input">2</span> secs
+    </div>
+
+    <div class="block">
+      think <span class="input">Hmm...</span>
+    </div>
+
+    <div class="block">
+      switch costume to <span class="input">costume1</span>
+    </div>
+
+    <div class="block">
+      next costume
+    </div>
+
+    <div class="block">
+      change size by <span class="input">10</span>
+    </div>
+
+    <div class="block">
+      set size to <span class="input">100</span>%
+    </div>
+
+    <div class="block">
+      show
+    </div>
+
+    <div class="block">
+      hide
+    </div>
+
+    <div class="block">
+      clear graphic effects
+    </div>
+
+    <div class="block">
+      change color effect by <span class="input">25</span>
+    </div>
+
+    <div class="block">
+      set color effect to <span class="input">50</span>
+    </div>
+
+    <div class="block">
+      change ghost effect by <span class="input">10</span>
+    </div>
+
+    <div class="block">
+      set ghost effect to <span class="input">30</span>
+    </div>
+
+    <div class="block">
+      go to front layer
+    </div>
+
+    <div class="block">
+      go back <span class="input">1</span> layers
+    </div>
+    <div class="block">
+  switch backdrop to <span class="input">backdrop1</span>
+</div>
+
+<div class="block">
+  next backdrop
+</div>
+
+<div class="block">
+  change brightness effect by <span class="input">20</span>
+</div>
+
+<div class="block">
+  set brightness effect to <span class="input">50</span>
+</div>
+
+<div class="block">
+  change saturation effect by <span class="input">15</span>
+</div>
+
+<div class="block">
+  set saturation effect to <span class="input">40</span>
+</div>
+
+<div class="block">
+  change pixelate effect by <span class="input">10</span>
+</div>
+
+<div class="block">
+  set pixelate effect to <span class="input">30</span>
+</div>
+
+<div class="block">
+  change whirl effect by <span class="input">5</span>
+</div>
+
+<div class="block">
+  set whirl effect to <span class="input">25</span>
+</div>
+
+<div class="block">
+  set layer to <span class="input">front</span>
+</div>
+
+<div class="block">
+  set layer to <span class="input">back</span>
+</div>
+
+<div class="block">
+  fade in over <span class="input">1</span> secs
+</div>
+
+<div class="block">
+  fade out over <span class="input">1</span> secs
+</div>
+
+<div class="block">
+  flash costume for <span class="input">0.5</span> secs
+</div>
+
+<div class="block">
+  pulse size by <span class="input">20</span>
+</div>
+
+<div class="block">
+  set costume center to x:<span class="input">0</span> y:<span class="input">0</span>
+</div>
+
+<div class="block">
+  mirror horizontally
+</div>
+
+<div class="block">
+  mirror vertically
+</div>
+
+
+  </div>
+
+  <a class="back" href="index.html">← Back to homepage</a>
+
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>HD 100546b Coding – Sound Blocks</title>
+  <style>
+    body {
+      background: radial-gradient(circle at top, #330000, #000);
+      color: #fff;
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 40px;
+    }
+    h1 {
+      font-size: 3rem;
+      margin-bottom: 5px;
+      color: #ff4d4d;
+    }
+    h2 {
+      margin-top: 30px;
+      font-size: 1.8rem;
+    }
+    p {
+      font-size: 1.1rem;
+      opacity: 0.9;
+    }
+    .block-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 20px;
+      margin-top: 20px;
+    }
+    .block {
+      background: #ff4d4d;
+      border-radius: 10px;
+      padding: 12px 16px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.4);
+      font-weight: bold;
+    }
+    .input {
+      background: white;
+      color: black;
+      padding: 2px 6px;
+      border-radius: 6px;
+      margin: 0 4px;
+    }
+    a.back {
+      display: inline-block;
+      margin-top: 30px;
+      color: #ff8080;
+      text-decoration: none;
+      font-size: 1rem;
+    }
+    a.back:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Sound Blocks</h1>
+  <p>Custom sound blocks for the HD 100546b Coding Scratch mod.</p>
+
+  <h2>Block list</h2>
+  <div class="block-grid">
+
+    <div class="block">
+      play sound <span class="input">pop</span>
+    </div>
+
+    <div class="block">
+      start sound <span class="input">pop</span>
+    </div>
+
+    <div class="block">
+      stop all sounds
+    </div>
+
+    <div class="block">
+      change volume by <span class="input">10</span>
+    </div>
+
+    <div class="block">
+      set volume to <span class="input">100</span>%
+    </div>
+
+    <div class="block">
+      change tempo by <span class="input">20</span>
+    </div>
+
+    <div class="block">
+      set tempo to <span class="input">120</span> bpm
+    </div>
+
+    <div class="block">
+      play sound <span class="input">laser</span> until done
+    </div>
+
+    <div class="block">
+      fade volume in over <span class="input">1</span> secs
+    </div>
+
+    <div class="block">
+      fade volume out over <span class="input">1</span> secs
+    </div>
+
+    <div class="block">
+      reverse sound <span class="input">pop</span>
+    </div>
+
+    <div class="block">
+      amplify sound by <span class="input">2x</span>
+    </div>
+
+    <div class="block">
+      pitch shift by <span class="input">+3</span> semitones
+    </div>
+
+    <div class="block">
+      echo sound with delay <span class="input">0.2</span> secs
+    </div>
+
+    <div class="block">
+      distort sound <span class="input">pop</span>
+    </div>
+
+    <div class="block">
+      play HD sound <span class="input">hd-pop</span>
+    </div>
+
+    <div class="block">
+      record new sound
+    </div>
+
+    <div class="block">
+      upload sound file
+    </div>
+
+  </div>
+
+  <a class="back" href="index.html">← Back to home</a>
+
+</body>
+</html>
+<div class="block">
+  loop sound <span class="input">pop</span>
+</div>
+
+<div class="block">
+  stop sound <span class="input">pop</span>
+</div>
+
+<div class="block">
+  mute all sounds
+</div>
+
+<div class="block">
+  unmute all sounds
+</div>
+
+<div class="block">
+  set pan to <span class="input">left</span>
+</div>
+
+<div class="block">
+  set pan to <span class="input">right</span>
+</div>
+
+<div class="block">
+  change pan by <span class="input">10</span>
+</div>
+
+<div class="block">
+  play sound at pitch <span class="input">+12</span>
+</div>
+
+<div class="block">
+  play sound at speed <span class="input">1.5x</span>
+</div>
+
+<div class="block">
+  play sound at volume <span class="input">50</span>%
+</div>
+
+<div class="block">
+  apply reverb <span class="input">medium</span>
+</div>
+
+<div class="block">
+  apply chorus <span class="input">strong</span>
+</div>
+
+<div class="block">
+  apply flanger <span class="input">deep</span>
+</div>
+
+<div class="block">
+  apply low-pass filter <span class="input">200Hz</span>
+</div>
+
+<div class="block">
+  apply high-pass filter <span class="input">5kHz</span>
+</div>
+
+<div class="block">
+  scrub sound to <span class="input">1.2</span> secs
+</div>
+
+<div class="block">
+  play HD sound <span class="input">nebula-blast</span> until done
+</div>
+
+<div class="block">
+  generate tone at <span class="input">440Hz</span>
+</div>
+
+<div class="block">
+  stop tone
+</div>
+
+<div class="block">
+  mix sound <span class="input">pop</span> with <span class="input">laser</span>
+</div>
+
+<div class="block">
+  export sound <span class="input">pop</span> as WAV
+</div>
+
+<div class="block">
+  normalize sound <span class="input">pop</span>
+</div>
+
+<div class="block">
+  trim silence from <span class="input">pop</span>
+</div>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>HD 100546b Coding – Events Blocks</title>
+  <style>
+    body {
+      background: radial-gradient(circle at top, #4d3a00, #000);
+      color: #fff;
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 40px;
+    }
+    h1 {
+      font-size: 3rem;
+      margin-bottom: 5px;
+      color: #ffcc00;
+    }
+    h2 {
+      margin-top: 30px;
+      font-size: 1.8rem;
+    }
+    p {
+      font-size: 1.1rem;
+      opacity: 0.9;
+    }
+    .block-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 20px;
+      margin-top: 20px;
+    }
+    .block {
+      background: #ffcc00;
+      border-radius: 10px;
+      padding: 12px 16px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.4);
+      font-weight: bold;
+      color: #000;
+    }
+    .input {
+      background: white;
+      color: black;
+      padding: 2px 6px;
+      border-radius: 6px;
+      margin: 0 4px;
+    }
+    a.back {
+      display: inline-block;
+      margin-top: 30px;
+      color: #ffdd55;
+      text-decoration: none;
+      font-size: 1rem;
+    }
+    a.back:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Events Blocks</h1>
+  <p>Custom event blocks for the HD 100546b Coding Scratch mod.</p>
+
+  <h2>Block list</h2>
+  <div class="block-grid">
+
+    <div class="block">
+      when green flag clicked
+    </div>
+
+    <div class="block">
+      when <span class="input">space</span> key pressed
+    </div>
+
+    <div class="block">
+      when this sprite clicked
+    </div>
+
+    <div class="block">
+      when backdrop switches to <span class="input">backdrop1</span>
+    </div>
+
+    <div class="block">
+      when loudness &gt; <span class="input">10</span>
+    </div>
+
+    <div class="block">
+      when timer &gt; <span class="input">5</span>
+    </div>
+
+    <div class="block">
+      broadcast <span class="input">message1</span>
+    </div>
+
+    <div class="block">
+      broadcast <span class="input">message1</span> and wait
+    </div>
+
+    <div class="block">
+      when I receive <span class="input">message1</span>
+    </div>
+
+    <div class="block">
+      when clone starts
+    </div>
+
+    <div class="block">
+      when stage clicked
+    </div>
+
+    <div class="block">
+      when project starts
+    </div>
+
+    <div class="block">
+      when variable <span class="input">score</span> changes
+    </div>
+
+    <div class="block">
+      when sprite enters zone <span class="input">A</span>
+    </div>
+
+    <div class="block">
+      when sprite leaves zone <span class="input">A</span>
+    </div>
+
+    <div class="block">
+      when HD event <span class="input">nebula-burst</span> triggers
+    </div>
+
+    <div class="block">
+      when sound <span class="input">pop</span> finishes
+    </div>
+
+    <div class="block">
+      when costume switches to <span class="input">costume2</span>
+    </div>
+
+    <div class="block">
+      when sprite overlaps <span class="input">Sprite2</span>
+    </div>
+
+    <div class="block">
+      when frame updates
+    </div>
+
+  </div>
+
+  <a class="back" href="index.html">← Back to home</a>
+
+</body>
+</html>
+<div class="block">
+  when sprite created
+</div>
+
+<div class="block">
+  when sprite deleted
+</div>
+
+<div class="block">
+  when project paused
+</div>
+
+<div class="block">
+  when project resumed
+</div>
+
+<div class="block">
+  when variable <span class="input">health</span> reaches <span class="input">0</span>
+</div>
+
+<div class="block">
+  when variable <span class="input">coins</span> increases
+</div>
+
+<div class="block">
+  when variable <span class="input">coins</span> decreases
+</div>
+
+<div class="block">
+  when timer resets
+</div>
+
+<div class="block">
+  when timer stops
+</div>
+
+<div class="block">
+  when sound <span class="input">laser</span> starts
+</div>
+
+<div class="block">
+  when sound <span class="input">laser</span> loops
+</div>
+
+<div class="block">
+  when costume changes
+</div>
+
+<div class="block">
+  when size changes
+</div>
+
+<div class="block">
+  when graphic effect changes
+</div>
+
+<div class="block">
+  when sprite touches color <span class="input">#ff0000</span>
+</div>
+
+<div class="block">
+  when sprite stops touching color <span class="input">#ff0000</span>
+</div>
+
+<div class="block">
+  when sprite enters region <span class="input">Nebula Zone</span>
+</div>
+
+<div class="block">
+  when sprite leaves region <span class="input">Nebula Zone</span>
+</div>
+
+<div class="block">
+  when HD event <span class="input">star-collapse</span> triggers
+</div>
+
+<div class="block">
+  when HD event <span class="input">galaxy-spin</span> triggers
+</div>
+
+<div class="block">
+  when frame <span class="input">60</span> reached
+</div>
+
+<div class="block">
+  when FPS drops below <span class="input">30</span>
+</div>
+
+<div class="block">
+  when FPS rises above <span class="input">60</span>
+</div>
+
+<div class="block">
+  when sprite collides with edge at angle <span class="input">45</span>°
+</div>
+
+<div class="block">
+  when sprite velocity changes
+</div>
+
+<div class="block">
+  when sprite rotation changes
+</div>
+
+<div class="block">
+  when stage loads
+</div>
+
+<div class="block">
+  when stage unloads
+</div>
+<div class="block">
+  when stop clicked
+</div>
+
+<div class="block">
+  when project fully stops
+</div>
+
+<div class="block">
+  when project restarts
+</div>
+
+<div class="block">
+  when sprite is dragged
+</div>
+
+<div class="block">
+  when sprite drag ends
+</div>
+
+<div class="block">
+  when mouse enters sprite
+</div>
+
+<div class="block">
+  when mouse leaves sprite
+</div>
+
+<div class="block">
+  when sprite becomes visible
+</div>
+
+<div class="block">
+  when sprite becomes hidden
+</div>
+
+<div class="block">
+  when backdrop changes
+</div>
+
+<div class="block">
+  when stage zoom changes
+</div>
+
+<div class="block">
+  when stage rotation changes
+</div>
+
+<div class="block">
+  when variable <span class="input">energy</span> hits <span class="input">100</span>
+</div>
+
+<div class="block">
+  when variable <span class="input">energy</span> drops below <span class="input">10</span>
+</div>
+
+<div class="block">
+  when sprite touches sprite <span class="input">Enemy</span>
+</div>
+
+<div class="block">
+  when sprite stops touching sprite <span class="input">Enemy</span>
+</div>
+
+<div class="block">
+  when HD event <span class="input">planet-rise</span> triggers
+</div>
+
+<div class="block">
+  when HD event <span class="input">core-ignite</span> triggers
+</div>
+
+<div class="block">
+  when frame <span class="input">120</span> reached
+</div>
+
+<div class="block">
+  when tick <span class="input">500</span> reached
+</div>
+
+<div class="block">
+  when sprite speed > <span class="input">20</span>
+</div>
+
+<div class="block">
+  when sprite speed < <span class="input">5</span>
+</div>
+
+<div class="block">
+  when sprite angle = <span class="input">90</span>°
+</div>
+
+<div class="block">
+  when sprite flips horizontally
+</div>
+
+<div class="block">
+  when sprite flips vertically
+</div>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>HD 100546b Coding – Control Blocks</title>
+  <style>
+    body {
+      background: radial-gradient(circle at top, #4d1f00, #000);
+      color: #fff;
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 40px;
+    }
+    h1 {
+      font-size: 3rem;
+      margin-bottom: 5px;
+      color: #ff8c1a;
+    }
+    h2 {
+      margin-top: 30px;
+      font-size: 1.8rem;
+    }
+    p {
+      font-size: 1.1rem;
+      opacity: 0.9;
+    }
+    .block-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 20px;
+      margin-top: 20px;
+    }
+    .block {
+      background: #ff8c1a;
+      border-radius: 10px;
+      padding: 12px 16px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.4);
+      font-weight: bold;
+      color: #000;
+    }
+    .input {
+      background: white;
+      color: black;
+      padding: 2px 6px;
+      border-radius: 6px;
+      margin: 0 4px;
+    }
+    a.back {
+      display: inline-block;
+      margin-top: 30px;
+      color: #ffb566;
+      text-decoration: none;
+      font-size: 1rem;
+    }
+    a.back:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Control Blocks</h1>
+  <p>Custom control blocks for the HD 100546b Coding Scratch mod.</p>
+
+  <h2>Block list</h2>
+  <div class="block-grid">
+
+    <div class="block">
+      wait <span class="input">1</span> seconds
+    </div>
+
+    <div class="block">
+      repeat <span class="input">10</span>
+    </div>
+
+    <div class="block">
+      forever
+    </div>
+
+    <div class="block">
+      if <span class="input">condition</span> then
+    </div>
+
+    <div class="block">
+      if <span class="input">condition</span> then else
+    </div>
+
+    <div class="block">
+      wait until <span class="input">condition</span>
+    </div>
+
+    <div class="block">
+      repeat until <span class="input">condition</span>
+    </div>
+
+    <div class="block">
+      stop all
+    </div>
+
+    <div class="block">
+      stop this script
+    </div>
+
+    <div class="block">
+      stop other scripts in sprite
+    </div>
+
+    <div class="block">
+      create clone of <span class="input">myself</span>
+    </div>
+
+    <div class="block">
+      delete this clone
+    </div>
+
+    <div class="block">
+      loop <span class="input">5</span> times
+    </div>
+
+    <div class="block">
+      break loop
+    </div>
+
+    <div class="block">
+      continue loop
+    </div>
+
+    <div class="block">
+      pause script for <span class="input">0.5</span> secs
+    </div>
+
+    <div class="block">
+      run script <span class="input">script1</span>
+    </div>
+
+    <div class="block">
+      run script <span class="input">script1</span> and wait
+    </div>
+
+    <div class="block">
+      set loop speed to <span class="input">fast</span>
+    </div>
+
+    <div class="block">
+      throttle script to <span class="input">30</span> FPS
+    </div>
+
+    <div class="block">
+      yield frame
+    </div>
+
+    <div class="block">
+      yield until <span class="input">condition</span>
+    </div>
+
+    <div class="block">
+      HD wait for event <span class="input">nebula-burst</span>
+    </div>
+
+    <div class="block">
+      HD trigger event <span class="input">core-ignite</span>
+    </div>
+
+  </div>
+
+  <a class="back" href="index.html">← Back to home</a>
+
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>HD 100546b Coding – Sensing Blocks</title>
+  <style>
+    body {
+      background: radial-gradient(circle at top, #00334d, #000);
+      color: #fff;
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 40px;
+    }
+    h1 {
+      font-size: 3rem;
+      margin-bottom: 5px;
+      color: #4dd2ff;
+    }
+    h2 {
+      margin-top: 30px;
+      font-size: 1.8rem;
+    }
+    p {
+      font-size: 1.1rem;
+      opacity: 0.9;
+    }
+    .block-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 20px;
+      margin-top: 20px;
+    }
+    .block {
+      background: #4dd2ff;
+      border-radius: 10px;
+      padding: 12px 16px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.4);
+      font-weight: bold;
+      color: #000;
+    }
+    .input {
+      background: white;
+      color: black;
+      padding: 2px 6px;
+      border-radius: 6px;
+      margin: 0 4px;
+    }
+    a.back {
+      display: inline-block;
+      margin-top: 30px;
+      color: #7fe6ff;
+      text-decoration: none;
+      font-size: 1rem;
+    }
+    a.back:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Sensing Blocks</h1>
+  <p>Custom sensing blocks for the HD 100546b Coding Scratch mod.</p>
+
+  <h2>Block list</h2>
+  <div class="block-grid">
+
+    <div class="block">
+      touching <span class="input">mouse-pointer</span>?
+    </div>
+
+    <div class="block">
+      touching color <span class="input">#ff0000</span>?
+    </div>
+
+    <div class="block">
+      color <span class="input">#ff0000</span> is touching <span class="input">#00ff00</span>?
+    </div>
+
+    <div class="block">
+      distance to <span class="input">Sprite1</span>
+    </div>
+
+    <div class="block">
+      ask <span class="input">What's your name?</span> and wait
+    </div>
+
+    <div class="block">
+      answer
+    </div>
+
+    <div class="block">
+      key <span class="input">space</span> pressed?
+    </div>
+
+    <div class="block">
+      mouse down?
+    </div>
+
+    <div class="block">
+      mouse x
+    </div>
+
+    <div class="block">
+      mouse y
+    </div>
+
+    <div class="block">
+      loudness
+    </div>
+
+    <div class="block">
+      timer
+    </div>
+
+    <div class="block">
+      reset timer
+    </div>
+
+    <div class="block">
+      current <span class="input">year</span>
+    </div>
+
+    <div class="block">
+      username
+    </div>
+
+    <div class="block">
+      HD sensor <span class="input">nebula-level</span>
+    </div>
+
+    <div class="block">
+      HD sensor <span class="input">core-heat</span>
+    </div>
+
+    <div class="block">
+      sprite <span class="input">Enemy</span> visible?
+    </div>
+
+    <div class="block">
+      sprite <span class="input">Enemy</span> size
+    </div>
+
+    <div class="block">
+      stage width
+    </div>
+
+    <div class="block">
+      stage height
+    </div>
+
+    <div class="block">
+      FPS
+    </div>
+
+    <div class="block">
+      tick count
+    </div>
+
+    <div class="block">
+      is project paused?
+    </div>
+
+    <div class="block">
+      is clone?
+    </div>
+
+  </div>
+
+  <a class="back" href="index.html">← Back to home</a>
+
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>HD 100546b Coding – Operator Blocks</title>
+  <style>
+    body {
+      background: radial-gradient(circle at top, #00264d, #000);
+      color: #fff;
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 40px;
+    }
+    h1 {
+      font-size: 3rem;
+      margin-bottom: 5px;
+      color: #4d9bff;
+    }
+    h2 {
+      margin-top: 30px;
+      font-size: 1.8rem;
+    }
+    p {
+      font-size: 1.1rem;
+      opacity: 0.9;
+    }
+    .block-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 20px;
+      margin-top: 20px;
+    }
+    .block {
+      background: #4d9bff;
+      border-radius: 10px;
+      padding: 12px 16px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.4);
+      font-weight: bold;
+      color: #000;
+    }
+    .input {
+      background: white;
+      color: black;
+      padding: 2px 6px;
+      border-radius: 6px;
+      margin: 0 4px;
+    }
+    a.back {
+      display: inline-block;
+      margin-top: 30px;
+      color: #7fb8ff;
+      text-decoration: none;
+      font-size: 1rem;
+    }
+    a.back:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Operator Blocks</h1>
+  <p>Custom operator blocks for the HD 100546b Coding Scratch mod.</p>
+
+  <h2>Block list</h2>
+  <div class="block-grid">
+
+    <!-- Arithmetic -->
+    <div class="block">
+      <span class="input">10</span> + <span class="input">5</span>
+    </div>
+
+    <div class="block">
+      <span class="input">10</span> - <span class="input">5</span>
+    </div>
+
+    <div class="block">
+      <span class="input">10</span> * <span class="input">5</span>
+    </div>
+
+    <div class="block">
+      <span class="input">10</span> / <span class="input">5</span>
+    </div>
+
+    <div class="block">
+      pick random <span class="input">1</span> to <span class="input">10</span>
+    </div>
+
+    <!-- Comparison -->
+    <div class="block">
+      <span class="input">10</span> &lt; <span class="input">5</span>?
+    </div>
+
+    <div class="block">
+      <span class="input">10</span> &gt; <span class="input">5</span>?
+    </div>
+
+    <div class="block">
+      <span class="input">10</span> = <span class="input">5</span>?
+    </div>
+
+    <!-- Logic -->
+    <div class="block">
+      <span class="input">condition1</span> and <span class="input">condition2</span>
+    </div>
+
+    <div class="block">
+      <span class="input">condition1</span> or <span class="input">condition2</span>
+    </div>
+
+    <div class="block">
+      not <span class="input">condition</span>
+    </div>
+
+    <!-- Strings -->
+    <div class="block">
+      join <span class="input">Hello</span> <span class="input">World</span>
+    </div>
+
+    <div class="block">
+      letter <span class="input">1</span> of <span class="input">Hello</span>
+    </div>
+
+    <div class="block">
+      length of <span class="input">Hello</span>
+    </div>
+
+    <div class="block">
+      <span class="input">Hello</span> contains <span class="input">He</span>?
+    </div>
+
+    <!-- Math functions -->
+    <div class="block">
+      round <span class="input">3.7</span>
+    </div>
+
+    <div class="block">
+      abs <span class="input">-5</span>
+    </div>
+
+    <div class="block">
+      sqrt <span class="input">16</span>
+    </div>
+
+    <div class="block">
+      sin <span class="input">45</span>°
+    </div>
+
+    <div class="block">
+      cos <span class="input">45</span>°
+    </div>
+
+    <div class="block">
+      tan <span class="input">45</span>°
+    </div>
+
+    <div class="block">
+      log <span class="input">10</span>
+    </div>
+
+    <div class="block">
+      exp <span class="input">2</span>
+    </div>
+
+    <!-- HD custom operators -->
+    <div class="block">
+      HD clamp <span class="input">value</span> between <span class="input">min</span> and <span class="input">max</span>
+    </div>
+
+    <div class="block">
+      HD map <span class="input">value</span> from <span class="input">0–1</span> to <span class="input">0–100</span>
+    </div>
+
+    <div class="block">
+      HD lerp from <span class="input">A</span> to <span class="input">B</span> by <span class="input">t</span>
+    </div>
+
+    <div class="block">
+      HD random nebula value
+    </div>
+
+  </div>
+
+  <a class="back" href="index.html">← Back to home</a>
+
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>HD 100546b Coding – Variables Blocks</title>
+  <style>
+    body {
+      background: radial-gradient(circle at top, #4d2600, #000);
+      color: #fff;
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 40px;
+    }
+    h1 { font-size: 3rem; margin-bottom: 5px; color: #ff9933; }
+    .block-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 20px;
+      margin-top: 20px;
+    }
+    .block {
+      background: #ff9933;
+      border-radius: 10px;
+      padding: 12px 16px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.4);
+      font-weight: bold;
+      color: #000;
+    }
+    .input {
+      background: white;
+      color: black;
+      padding: 2px 6px;
+      border-radius: 6px;
+      margin: 0 4px;
+    }
+  </style>
+</head>
+<body>
+
+<h1>Variables Blocks</h1>
+
+<div class="block-grid">
+
+  <div class="block">
+    set <span class="input">my variable</span> to <span class="input">0</span>
+  </div>
+
+  <div class="block">
+    change <span class="input">my variable</span> by <span class="input">1</span>
+  </div>
+
+  <div class="block">
+    show variable <span class="input">my variable</span>
+  </div>
+
+  <div class="block">
+    hide variable <span class="input">my variable</span>
+  </div>
+
+  <div class="block">
+    <span class="input">my variable</span>
+  </div>
+
+  <div class="block">
+    reset variable <span class="input">my variable</span>
+  </div>
+
+  <div class="block">
+    HD clamp variable <span class="input">my variable</span> between <span class="input">0</span> and <span class="input">100</span>
+  </div>
+
+  <div class="block">
+    HD animate variable <span class="input">my variable</span> over <span class="input">1</span> sec
+  </div>
+
+</div>
+
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>HD 100546b Coding – Lists Blocks</title>
+  <style>
+    body {
+      background: radial-gradient(circle at top, #330000, #000);
+      color: #fff;
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 40px;
+    }
+    h1 { font-size: 3rem; margin-bottom: 5px; color: #ff4d4d; }
+    .block-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 20px;
+      margin-top: 20px;
+    }
+    .block {
+      background: #ff4d4d;
+      border-radius: 10px;
+      padding: 12px 16px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.4);
+      font-weight: bold;
+      color: #000;
+    }
+    .input {
+      background: white;
+      color: black;
+      padding: 2px 6px;
+      border-radius: 6px;
+      margin: 0 4px;
+    }
+  </style>
+</head>
+<body>
+
+<h1>Lists Blocks</h1>
+
+<div class="block-grid">
+
+  <div class="block">
+    add <span class="input">thing</span> to <span class="input">my list</span>
+  </div>
+
+  <div class="block">
+    delete <span class="input">1</span> of <span class="input">my list</span>
+  </div>
+
+  <div class="block">
+    insert <span class="input">thing</span> at <span class="input">1</span> of <span class="input">my list</span>
+  </div>
+
+  <div class="block">
+    replace item <span class="input">1</span> of <span class="input">my list</span> with <span class="input">thing</span>
+  </div>
+
+  <div class="block">
+    item <span class="input">1</span> of <span class="input">my list</span>
+  </div>
+
+  <div class="block">
+    length of <span class="input">my list</span>
+  </div>
+
+  <div class="block">
+    <span class="input">my list</span> contains <span class="input">thing</span>?
+  </div>
+
+  <div class="block">
+    set list <span class="input">my list</span> to <span class="input">item</span>
+  </div>
+
+  <div class="block">
+    HD shuffle <span class="input">my list</span>
+  </div>
+
+  <div class="block">
+    HD reverse <span class="input">my list</span>
+  </div>
+
+  <div class="block">
+    HD sort <span class="input">my list</span> ascending
+  </div>
+
+  <div class="block">
+    HD sort <span class="input">my list</span> descending
+  </div>
+
+</div>
+
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>HD 100546b Coding – Extensions</title>
+  <style>
+    body {
+      background: radial-gradient(circle at top, #26004d, #000);
+      color: #fff;
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 40px;
+    }
+    h1 { font-size: 3rem; margin-bottom: 5px; color: #c45cff; }
+    h2 { margin-top: 30px; font-size: 1.8rem; }
+    p { font-size: 1.1rem; opacity: 0.9; }
+
+    .ext-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 20px;
+      margin-top: 20px;
+    }
+
+    .ext {
+      background: #c45cff;
+      border-radius: 10px;
+      padding: 16px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.4);
+      font-weight: bold;
+      color: #000;
+      cursor: pointer;
+      transition: 0.2s;
+    }
+
+    .ext:hover {
+      background: #e07cff;
+      transform: scale(1.03);
+    }
+
+    .block-preview {
+      margin-top: 10px;
+      padding: 10px;
+      background: #fff;
+      color: #000;
+      border-radius: 6px;
+      font-size: 0.9rem;
+      display: none;
+    }
+  </style>
+
+  <script>
+    function togglePreview(id) {
+      const el = document.getElementById(id);
+      el.style.display = el.style.display === "block" ? "none" : "block";
+    }
+  </script>
+</head>
+<body>
+
+<h1>Extensions</h1>
+<p>Select an extension to reveal its blocks.</p>
+
+<div class="ext-grid">
+
+  <!-- Motion Expanded -->
+  <div class="ext" onclick="togglePreview('motionEx')">
+    Motion Expanded
+    <div class="block-preview" id="motionEx">
+      move diagonally<br>
+      bounce with angle<br>
+      glide with easing<br>
+      HD warp movement
+    </div>
+  </div>
+
+  <!-- Looks+ -->
+  <div class="ext" onclick="togglePreview('looksPlus')">
+    Looks+
+    <div class="block-preview" id="looksPlus">
+      glow effect<br>
+      outline effect<br>
+      HD cosmic color shift<br>
+      costume pulse
+    </div>
+  </div>
+
+  <!-- Sounds Expanded -->
+  <div class="ext" onclick="togglePreview('soundEx')">
+    Sounds Expanded
+    <div class="block-preview" id="soundEx">
+      echo<br>
+      reverb<br>
+      pitch shift<br>
+      HD nebula sound
+    </div>
+  </div>
+
+  <!-- Events Expanded -->
+  <div class="ext" onclick="togglePreview('eventsEx')">
+    Events Expanded
+    <div class="block-preview" id="eventsEx">
+      when HD event triggers<br>
+      when FPS drops<br>
+      when sprite enters zone<br>
+      when sound finishes
+    </div>
+  </div>
+
+  <!-- Operators+ -->
+  <div class="ext" onclick="togglePreview('opsPlus')">
+    Operators+
+    <div class="block-preview" id="opsPlus">
+      clamp<br>
+      lerp<br>
+      map range<br>
+      HD nebula random
+    </div>
+  </div>
+
+  <!-- Variables Plus -->
+  <div class="ext" onclick="togglePreview('varsPlus')">
+    Variables Plus
+    <div class="block-preview" id="varsPlus">
+      animate variable<br>
+      clamp variable<br>
+      variable history<br>
+      HD variable smoothing
+    </div>
+  </div>
+
+  <!-- Cool Lists -->
+  <div class="ext" onclick="togglePreview('coolLists')">
+    Cool Lists
+    <div class="block-preview" id="coolLists">
+      shuffle<br>
+      reverse<br>
+      sort ascending<br>
+      sort descending
+    </div>
+  </div>
+
+  <!-- Comment Markdown -->
+  <div class="ext" onclick="togglePreview('mdComments')">
+    Comment Markdown
+    <div class="block-preview" id="mdComments">
+      bold text<br>
+      italic text<br>
+      code formatting<br>
+      HD cosmic markdown
+    </div>
+  </div>
+
+  <!-- Hardware Extensions -->
+  <div class="ext" onclick="togglePreview('hardware')">
+    Hardware Extensions
+    <div class="block-preview" id="hardware">
+      Gamepad<br>
+      Pen<br>
+      Makey Makey<br>
+      LEGO Spike<br>
+      WeDo 2.0
+    </div>
+  </div>
+
+</div>
+
+</body>
+</html>
